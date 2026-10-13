@@ -15,6 +15,7 @@ body {
 
 /* Main content */
 main {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -26,6 +27,7 @@ header {
 }
 
 h1 {
+    margin-top: 0;
     margin-bottom: 8px;
     color: #173b70;
     line-height: 1.25;
@@ -49,6 +51,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 18px;
     color: #173b70;
+    line-height: 1.35;
 }
 
 /* Form fields */
@@ -60,6 +63,7 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
+    color: #243044;
 }
 
 input,
@@ -75,6 +79,11 @@ select {
     font: inherit;
 }
 
+input:hover,
+select:hover {
+    border-color: #647b9b;
+}
+
 /* Buttons */
 button {
     min-height: 44px;
@@ -84,6 +93,7 @@ button {
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.15s ease;
 }
 
 #save-button {
@@ -101,6 +111,10 @@ button {
     color: #243044;
 }
 
+#cancel-button:hover {
+    background-color: #d3dce9;
+}
+
 #cancel-button[hidden] {
     display: none;
 }
@@ -116,6 +130,7 @@ button:focus-visible {
 /* Status message and empty list */
 #message {
     margin-bottom: 0;
+    overflow-wrap: anywhere;
 }
 
 #empty-state {
@@ -124,6 +139,7 @@ button:focus-visible {
 
 #project-list {
     padding-left: 24px;
+    overflow-wrap: anywhere;
 }
 
 /* Smaller screens */
@@ -134,16 +150,31 @@ button:focus-visible {
 
     header {
         text-align: left;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
     }
 
     section {
         padding: 16px;
         margin-bottom: 16px;
+        border-radius: 8px;
+    }
+
+    #project-form div {
+        margin-bottom: 16px;
+    }
+
+    #save-button {
+        width: 100%;
     }
 
     #cancel-button {
-        margin-top: 8px;
+        margin-top: 10px;
         margin-left: 0;
+        width: 100%;
     }
 }
 
